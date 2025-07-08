@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Resume Generator</h1>
+</header>
+
+<div class="container">
+
+  <div class="form-section">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="email" placeholder="Email" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <textarea id="summary" placeholder="Professional Summary" rows="3"></textarea>
+
+    <h3>Education</h3>
+    <input type="text" id="education" placeholder="e.g. B.Tech in Computer Science, ABC University">
+
+    <h3>Experience</h3>
+    <textarea id="experience" placeholder="Your Work Experience" rows="4"></textarea>
+
+    <button onclick="generatePreview()">Preview Resume</button>
+    <button onclick="downloadPDF()" style="margin-left: 1rem;">Download as PDF</button>
+  </div>
+
+  <div class="preview-section">
+    <h2>Resume Preview</h2>
+    <div class="resume" id="resume">
+      <h1>Your Name</h1>
+      <p>Email: example@example.com</p>
+      <p>Phone: 0000000000</p>
+      <h3>Professional Summary</h3>
+      <p>Your summary goes here...</p>
+      <h3>Education</h3>
+      <p>Education details...</p>
+      <h3>Experience</h3>
+      <p>Experience details...</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
